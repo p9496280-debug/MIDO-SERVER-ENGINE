@@ -11,7 +11,7 @@ STATIC.mkdir(exist_ok=True)
 DB_PATH=Path(os.getenv('DATA_DIR', str(ROOT)))/'mido_server.db'
 DB_PATH.parent.mkdir(parents=True,exist_ok=True)
 SECRET=os.getenv('MIDO_SECRET_KEY','change-this-secret-before-production').encode()
-ADMIN_USER=os.getenv('ADMIN_USERNAME','Mohammed)
+ADMIN_USER=os.getenv('ADMIN_USERNAME','Mohammed')
 ADMIN_PASS=os.getenv('ADMIN_PASSWORD','mohammedaaa222')
 app=FastAPI(title='MIDO SERVER ENGINE',version='3.0')
 app.mount('/static',StaticFiles(directory=STATIC),name='static')
